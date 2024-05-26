@@ -1,0 +1,86 @@
+/*
+QuantumFinance
+*/
+[
+    {
+      "cliente": {
+        "id": "1",
+        "nome": "Guilherme Ruiz",
+        "cpf": "123.456.789-00",
+        "dataNascimento": "1980-01-01",
+        "endereco": {
+          "rua": "Rua Fiap",
+          "numero": "25",
+          "bairro": "Paulista",
+          "cidade": "São Paulo",
+          "estado": "SP",
+          "cep": "01311-000"
+        },
+        "foto_perfil": {
+          "url": "https://media.licdn.com/dms/image/D5603AQG4gauz_mYEbQ/profile-displayphoto-shrink_200_200/0/1671142354927?e=1722470400&v=beta&t=VR1gffTjbuvQ3hhLhhPcodBKQSUC0auYQH2eEprgtpg"
+        },
+        "assinatura_eletronica": {
+          "url": "https://www.linkedin.com/in/guilhermeruizb/overlay/contact-info/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B9ezDUwXjQe%2B%2FGF8gxByZbg%3D%3D"
+        },
+        "contatos": {
+          "email": "guilhermeruizb@gmail.com",
+          "telefone_residencial": "11 99999-9999",
+          "telefone_celular": "11 95204-2604"
+        }
+      }
+    },
+    {
+      "cliente": {
+        "id": "2",
+        "nome": "Pablo Schimidt",
+        "cpf": "987.654.321-00",
+        "dataNascimento": "1990-04-01",
+        "endereco": {
+          "rua": "Rua Fiap",
+          "numero": "26",
+          "bairro": "Paulista",
+          "cidade": "São Paulo",
+          "estado": "SP",
+          "cep": "01311-000"
+        },
+        "foto_perfil": {
+          "url": "https://media.licdn.com/dms/image/C4E03AQFuK7FClzakuQ/profile-displayphoto-shrink_200_200/0/1657054037519?e=1722470400&v=beta&t=lrnrfVKKgkPdCPSXlWs6FA5UQjzMRCFuyCvw2x78GKA"
+        },
+        "assinatura_eletronica": {
+          "url": "https://www.linkedin.com/in/pabloschimidt/overlay/contact-info/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B%2BkPaVepATFSFEQxWcUXtpA%3D%3D"
+        },
+        "contatos": {
+          "email": "pablo.schimidt@gmail.com",
+          "telefone_residencial": "11 99999-9999",
+          "telefone_celular": "11 94077-4642"
+        }
+      }
+    },
+    {
+      "cliente": {
+        "id": "3",
+        "nome": "Douglas Padovani",
+        "cpf": "321.654.987-00",
+        "dataNascimento": "1985-07-20",
+        "endereco": {
+          "rua": "Rua Fiap",
+          "numero": "27",
+          "bairro": "Paulista",
+          "cidade": "São Paulo",
+          "estado": "SP",
+          "cep": "01311-000"
+        },
+        "foto_perfil": {
+          "url": "https://media.licdn.com/dms/image/C4D03AQGe1-5DwNi7nA/profile-displayphoto-shrink_200_200/0/1570190876023?e=1722470400&v=beta&t=FiHbaHuLMQ9JPe9CMu-ShRhHHm8t7ts4_lDLA4MYBGM"
+        },
+        "assinatura_eletronica": {
+          "url": "https://www.linkedin.com/in/douglas-padovani-baa2a4195/overlay/contact-info/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BKAsWEivsRYi2x4k%2BJUdWMg%3D%3D"
+        },
+        "contatos": {
+          "email": "dpadovani@gmail.com",
+          "telefone_residencial": "11 99999-9999",
+          "telefone_celular": "11 99427-1294"
+        }
+      }
+    }
+  ]
