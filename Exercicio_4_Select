@@ -1,0 +1,24 @@
+*CRIANDO SELECT PARA RELATORIO DE ANALISE DE TRANSAÇÕES*/
+
+SET @data_inicio = '2022-01-01';
+SET @data_fim = '2024-12-31';
+SET @tipo_transacao = 1; -- Exemplo de tipo de transação
+
+-- Consulta para análise das transações
+SELECT
+    t.dt_transacao AS DataTransacao,
+    tt.descricao AS TipoTransacao,
+    COUNT(t.idTransacao) AS NumeroTransacoes,
+    SUM(t.valor) AS ValorTotalTransacoes,
+    AVG(t.valor) AS ValorMedioTransacoes
+FROM
+    Transacao t
+JOIN
+    Tipo_transacao tt ON t.Tipo_transacao_idTipo_transacao = tt.idTipo_transacao
+WHERE
+    t.dt_transacao BETWEEN @data_inicio AND @data_fim
+    AND t.Tipo_transacao_idTipo_transacao = @tipo_transacao
+GROUP BY
+    t.dt_transacao, tt.descricao
+ORDER BY
+    t.dt_transacao ASC;
