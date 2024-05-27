@@ -1,0 +1,73 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Tipo_transacao`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Tipo_transacao` (
+  `idTipo_transacao` INT NOT NULL,
+  `descricao` VARCHAR(3) NULL,
+  PRIMARY KEY (`idTipo_transacao`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Transacao`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Transacao` (
+  `idTransacao` INT NOT NULL,
+  `cliente_id` INT NULL,
+  `valor` FLOAT NULL,
+  `status` VARCHAR(10) NULL,
+  `id_destinatario` INT NULL,
+  `Tipo_transacao_idTipo_transacao` INT NOT NULL,
+  `dt_transacao` DATETIME NULL,
+  PRIMARY KEY (`idTransacao`, `Tipo_transacao_idTipo_transacao`),
+  INDEX `fk_Transacao_Tipo_transacao1_idx` (`Tipo_transacao_idTipo_transacao` ASC) VISIBLE,
+  CONSTRAINT `fk_Transacao_Tipo_transacao1`
+    FOREIGN KEY (`Tipo_transacao_idTipo_transacao`)
+    REFERENCES `mydb`.`Tipo_transacao` (`idTipo_transacao`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+
+USE `mydb` ;
+/* INSERINDO DADOS NA TABELA "TIPO_TRANSACAO"*/
+
+insert into tipo_transacao
+values (1,'DOC');
+
+insert into tipo_transacao
+values (2,'TED');
+
+insert into tipo_transacao
+values (3,'PIX');
+
+/* INSERINDO DADOS NA TABELA "TRANSACAO"*/
+
+insert into transacao
+values
+(1,1,100.00,'Aprovada',2,1,'2023-03-16 14:22:03'),
+(2,2,150.10,'Aprovada',3,2,'2024-04-01 14:37:37'),
+(3,3,170.90,'Aprovada',4,3,'2022-05-20 15:50:45'),
+(4,1,199.99,'Negada',2,1,'2024-01-01 14:56:59');
